@@ -1,0 +1,49 @@
+.error_datos{
+    background-color: #E74F4F;
+    padding: 10px 0 ;
+    border-radius:  0 0 50px 50px;
+    text-align: center;
+    display: none;
+} 
+.error_campos{
+    background-color: #E74F4F;
+    padding: 10px 0 ;
+    border-radius:  0 0 50px 50px;
+    text-align: center;
+    display: none;
+} 
+
+#imagen_login {
+    width:690px;
+    height: 400px;
+}
+
+#pass, #usuario {
+    width: 100%;
+    background: #cbcbcb;
+    border-radius: 7px;
+    height: 45px;
+    line-height: 45px;
+    color: #1e1e2e;
+    margin-top: 10px;
+    border: none;
+}
+
+#iniciar_sesion {
+    margin-top: 20px;
+    height: 45px;
+    width: 100%;
+    background-image: linear-gradient(#5d9ef7,#1c4a6f);
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: .1s ease all;
+}
+
+.sistema_medico {
+    margin-bottom: 40px;
+    color: black;
+}
+

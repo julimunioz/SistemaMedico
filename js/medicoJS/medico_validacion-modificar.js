@@ -1,0 +1,121 @@
+formulario = document.getElementById('formulario_medico');
+inputs = document.querySelectorAll('#formulario_medico input'); 
+
+/* EXPRESIONES REGULARES */
+expresiones = {
+	nombre: /^[A-Za-zÀ-ÿ\s]{3,20}$/, // Letras, espacios y acentos.
+	apellido: /^[a-zA-ZÀ-ÿ\s]{3,20}$/, // Letras, espacios y acentos.
+	documento: /^\d{7,8}$/, // 7 a 8 numeros.
+	telefono: /^[\d\s]{10,14}$/, // 14 numeros.
+	matricula: /^\d{4}$/, // 2 a 4 numeros.
+}
+
+campos = {
+	nombre: true,
+	apellido: true,
+	documento: true,
+	telefono: true,
+	matricula: true,
+}
+
+
+validarFormulario = (e) => {
+	switch(e.target.name) {
+		
+		case "nombre": 	 	
+			validarCampo(expresiones.nombre, e.target, 'nombre');
+		break;
+		
+		case "apellido": 	 	
+			validarCampo(expresiones.apellido, e.target, 'apellido');
+		break;
+		
+		case "documento": 	 	
+			validarCampo(expresiones.documento, e.target, 'documento');
+		break;
+		
+		case "telefono": 	 	
+			validarCampo(expresiones.telefono, e.target, 'telefono');
+		break;
+		
+		case "matricula": 	 	
+			validarCampo(expresiones.matricula, e.target, 'matricula');
+		break;
+	}
+}
+
+validarCampo = (expresion, input, campo) => {
+	
+	if (expresion.test(input.value)){
+		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
+		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-correcto');
+		document.querySelector(`#grupo__${campo} i`).classList.add('bi-check-lg');
+		document.querySelector(`#grupo__${campo} i`).classList.remove('bi-x-lg');
+		document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.remove('formulario__input-error-activo');
+		campos[campo] = true;
+	} else {
+		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-incorrecto');
+		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-correcto');
+		document.querySelector(`#grupo__${campo} i`).classList.add('bi-x-lg');
+		document.querySelector(`#grupo__${campo} i`).classList.remove('bi-check-lg');
+		document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.add('formulario__input-error-activo');
+		campos[campo] = false;
+	}
+}
+
+inputs.forEach((input) => {
+	input.addEventListener('keyup', validarFormulario);
+	input.addEventListener('blur', validarFormulario); 
+});
+
+
+
+formulario.addEventListener('submit', (e) => {
+	e.preventDefault();
+	
+
+	if (campos.nombre && campos.apellido && campos.documento && campos.telefono && campos.matricula){
+
+		var nombreMedico = document.getElementById('nombreMedico').value;
+		var apellidoMedico = document.getElementById('apellidoMedico').value;
+		var dniMedico = document.getElementById('dniMedico').value;
+		var telefonoMedico = document.getElementById('telefonoMedico').value;
+		var matricula = document.getElementById('matricula').value;
+		var especialidad = $("#especialidad option:selected").text();
+	
+		var idMedico = $('#idmed').text();
+		var datosMedico = [idMedico, nombreMedico, apellidoMedico, dniMedico, matricula, especialidad, telefonoMedico];
+
+		$.ajax({
+			type:"post",
+			data: {param: 305, datosMedico},
+			url: "scripts/sistemaMedico.php",
+			dataType:'json',
+			success: function(respuesta){
+				if (respuesta.success == true) {
+
+					tablaMedicos.ajax.reload();
+					document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
+					setTimeout(() => {
+						document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
+						$('#modal_modificar-medico').modal('hide');
+					}, 2000);
+					
+				}else{
+					alert('Error al modificar');
+				}
+			}
+		});
+
+	} else {
+		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
+		setTimeout(() => {
+			document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
+		}, 2000);
+	}
+
+});
+
+
+
+

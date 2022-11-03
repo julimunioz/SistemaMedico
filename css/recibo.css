@@ -1,0 +1,53 @@
+#recibo{
+	  	  padding: 80px;
+	  border:  5px solid #5d9ef7 ;
+}
+
+.column{
+	  float: left;
+	  width: 32%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#logo {
+	width: 250px;
+	height: 200px;
+}
+
+#nro {
+	float: right; 
+	text-align: center;
+	padding-top: 50px;
+}
+
+#datoscolumn{
+	width: 50%;
+}
+
+#tabla{
+	margin-bottom: 180px;
+}
+
+table{
+	width: 100%;
+	text-align: center;
+}
+
+tr{
+	border-bottom: solid 1px lightblue;
+	
+}
+
+th{
+	padding-top: 5px;
+}
+
+td{
+	padding-top: 10px;
+}
+
