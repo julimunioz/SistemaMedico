@@ -92,7 +92,7 @@ Selección de Paciente. Opción si es diferido, para cargar la consulta médica 
 Proximo paso. Seleccionar al medico buscando por Nro Matricula o Nombre y Apellido. Luego seleccionar el diágnostico del paciente y la practica a realizar.
 
 
-![image](https://user-images.githubusercontent.com/103261440/200309439-4a2515d5-4a78-4453-b741-6099dec8f67a.png)
+![image](https://user-images.githubusercontent.com/103261440/200323721-8455b77f-a059-49d4-b8d0-19f5dde54678.png)
 
 
 Una vez completo todos los campos, se habilita el botón para VALIDAR.
