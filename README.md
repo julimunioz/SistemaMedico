@@ -47,39 +47,100 @@ El sistema cuenta con su respectivo Manual de Usuarion, el cual contiene la sigu
 
 ## Imagenes del Sistema
 
-### Inicio
+### Login
+
+![image](https://user-images.githubusercontent.com/103261440/200310740-66d23ede-2bae-40b2-a3e3-1aaeae0e70a9.png)
+
+
+### Inicio / Menú
 
 ![image](https://user-images.githubusercontent.com/103261440/199820422-d3a7ef5f-5a32-42bf-9d8c-5212250f02c9.png)
 
-### Carga de Paciente. 
+### Pacientes
 
-Validación con Expresiones Regulares
+Carga PACIENTES. Con su respectiva validación de formulario. (JavaScript + Expresiones Regulares)
 
 ![image](https://user-images.githubusercontent.com/103261440/199821429-02c1c715-3139-4c6d-a507-5d76bfe1eb12.png)
 
-### Listado Pacientes. 
+Listado PACIENTES. Te da la opción de ver la información completa, modificarla o eliminarla si es necesario.
 
-Te da la opción de ver la información completa, modificarla o eliminarla si es necesario.
+![image](https://user-images.githubusercontent.com/103261440/200313010-ebf4cc72-0f23-47f8-8928-4dd4576b9573.png)
 
-![image](https://user-images.githubusercontent.com/103261440/199823046-13f93d30-5642-4c74-af6c-c3cf2db2ed61.png)
+### Medicos
+
+Listado MEDICOS.
+
+![image](https://user-images.githubusercontent.com/103261440/200311327-b268f328-2210-46af-bbf7-0203b0fde5c7.png)
+
+Carga MEDICOS. Con la misma validación de formulario.
+
+![image](https://user-images.githubusercontent.com/103261440/200311481-f2285e79-3f3e-4bab-b675-f4ba6e4ff85d.png)
 
 ### Atención Ambulatoria
 
+A la hora de realizar una atención medica, el primer paso consta de buscar al PACIENTE por su dni.
+
+![image](https://user-images.githubusercontent.com/103261440/200311901-c940ad81-a79d-4b14-995e-bdae6e9bf633.png)
+
+
 Selección de Paciente. Opción si es diferido, para cargar la consulta médica con fecha atrazada.
 
-![image](https://user-images.githubusercontent.com/103261440/199823549-a9ca8151-7789-49a6-b613-4fcf3144877d.png)
+
+![image](https://user-images.githubusercontent.com/103261440/200309584-b6b350ec-e749-4f3a-a5a1-ee0f26e4ad8f.png)
+
 
 Proximo paso. Seleccionar al medico buscando por Nro Matricula o Nombre y Apellido. Luego seleccionar el diágnostico del paciente y la practica a realizar.
 
-![image](https://user-images.githubusercontent.com/103261440/199824238-e068cf58-f99e-4bc6-b3dd-98c1f05db9a8.png)
+
+![image](https://user-images.githubusercontent.com/103261440/200309439-4a2515d5-4a78-4453-b741-6099dec8f67a.png)
+
 
 Una vez completo todos los campos, se habilita el botón para VALIDAR.
 
+
 ![image](https://user-images.githubusercontent.com/103261440/199824473-25b8ba6d-acfb-4ce9-8c5f-646f48d71b7b.png)
+
 
 Al validar, se genera el reporte en formato pdf, el cual se debe imprimir, para que firme el paciente.
 
-![image](https://user-images.githubusercontent.com/103261440/199830037-d97060eb-d1ba-45c1-ab65-66b9a9d55220.png)
+
+![image](https://user-images.githubusercontent.com/103261440/200309814-2ad5810d-f8ae-45f9-85bb-1e5e6e1f3ce0.png)
+
+### Consultas
+
+![image](https://user-images.githubusercontent.com/103261440/200310301-f852cfd4-c49b-405c-8f4d-22e06a2fa6ef.png)
+
+En la vista “CONSULTAS”, encontraremos el listado de todas las consumiciones que se realizaron hasta el momento, teniendo la opción de ver detalladamente cada una de ellas como también imprimirlas o descargarlas, y anular la que desee.
+
+![image](https://user-images.githubusercontent.com/103261440/200310489-ea639dc3-a261-4d03-b97e-b089e17c935b.png)
+
+### Configuración de Usuario
+
+También cuenta con una pequeña configuracion para el usuario, en este caso CAMBIO DE CONTRASEÑA.
+
+![image](https://user-images.githubusercontent.com/103261440/200312501-ba26f69e-7946-435b-b20d-fd74825a35ab.png)
+
+Para eso, primero debemos verificar la contraseña actual.
+
+![image](https://user-images.githubusercontent.com/103261440/200312567-de06b285-88b6-48e9-900d-70843e90cfb5.png)
+
+Una vez verificada, podremos ingresar la nueva contraseña, que debe tener entre 6 a 12 dígitos.
+
+![image](https://user-images.githubusercontent.com/103261440/200312612-a78892de-af17-4719-936c-b88c8ccbf37e.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
